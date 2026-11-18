@@ -58,11 +58,11 @@ Actualizar `README.md` con:
 
 ## Criterios de aceptación
 
-- [ ] `docker compose up --build` levanta PostgreSQL, Kafka y la API.
-- [ ] `/healthz` responde `200`.
-- [ ] Un evento producido en Kafka genera una alerta consultable por la API.
-- [ ] Un evento duplicado no genera una segunda alerta.
-- [ ] `PATCH /alerts/{id}/read` funciona desde el contenedor.
-- [ ] `dotnet test` pasa y la cobertura es ≥ 60%.
-- [ ] El workflow de GitHub Actions valida build, tests y Docker.
-- [ ] La documentación permite arrancar sin conocimiento previo del repo.
+- [x] `docker compose up --build` levanta PostgreSQL, Kafka y la API.
+- [x] `/healthz` responde `200`.
+- [x] Un evento producido en Kafka genera una alerta consultable por la API.
+- [x] Un evento duplicado no genera una segunda alerta.
+- [x] `PATCH /alerts/{id}/read` funciona desde el contenedor.
+- [x] `dotnet test` pasa y la cobertura es ≥ 60%.
+- [x] El workflow de GitHub Actions valida build, tests y Docker.
+- [x] La documentación permite arrancar sin conocimiento previo del repo.

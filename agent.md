@@ -31,7 +31,9 @@ Microservicio interno que consume eventos de builds guardadas y genera alertas p
 - `src/Alerts.Infrastructure/` — EF Core, migraciones, repositorio y consumidor Kafka
 - `src/Alerts.Api/` — host ASP.NET Core, endpoints, healthcheck y DI
 - `tests/Alerts.Tests/` — tests unitarios y de integración
-- `docker-compose.yml` — PostgreSQL + Kafka + servicio para desarrollo local
+- `docker-compose.yml` - PostgreSQL + Kafka + servicio para desarrollo local
+- `Dockerfile` - imagen multi-stage de la API
+- `.github/workflows/ci.yml` - build, tests, cobertura y smoke test Docker
 
 ## Convenciones
 

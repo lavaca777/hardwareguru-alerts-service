@@ -1,6 +1,8 @@
 using Alerts.Application;
 using Alerts.Infrastructure;
 using Alerts.Infrastructure.Kafka;
+using Alerts.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +23,13 @@ builder.Services.AddSingleton<IKafkaConsumerFactory, KafkaConsumerFactory>();
 builder.Services.AddHostedService<KafkaAlertConsumer>();
 
 var app = builder.Build();
+
+if (builder.Configuration.GetValue<bool>("Database:ApplyMigrations"))
+{
+    using var scope = app.Services.CreateScope();
+    var dbContext = scope.ServiceProvider.GetRequiredService<AlertsDbContext>();
+    dbContext.Database.Migrate();
+}
 
 app.UseExceptionHandler();
 
