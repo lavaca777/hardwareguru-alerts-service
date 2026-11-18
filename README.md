@@ -19,7 +19,7 @@ Implementado en `001-alert-core`, `002-kafka-ingestion` y `003-runtime-and-deliv
 
 Pendiente: integración `/api/alerts` con el API Gateway.
 
-La planificación completa está en [`spec/`](spec/) y las convenciones en [`agent.md`](agent.md).
+La planificación SDD y las convenciones internas se mantienen locales y no se versionan.
 
 ## Tecnologías
 
@@ -54,7 +54,7 @@ Los puertos locales previstos son:
 
 ## Contrato del evento
 
-El esquema de referencia está en [`spec/constitution/contracts.md`](spec/constitution/contracts.md). El repo `hardwareguru-infra` todavía no existe; este es el contrato provisional:
+El repo `hardwareguru-infra` todavía no existe; este es el contrato provisional:
 
 ```json
 {
@@ -198,8 +198,6 @@ Resultado actual: **62 tests**, 63.3% de líneas y 78.4% de ramas. La meta del p
 
 ```text
 hardwareguru-alerts-service/
-├── agent.md
-├── spec/                       # SDD: constitución, contratos y features
 ├── src/
 │   ├── Alerts.Api/             # Controllers, DTOs y host
 │   ├── Alerts.Application/     # Casos de uso e interfaces

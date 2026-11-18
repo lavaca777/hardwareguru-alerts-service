@@ -482,3 +482,7 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# Documentación SDD local (no versionada)
+spec/
+agent.md
