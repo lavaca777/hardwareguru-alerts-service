@@ -98,11 +98,11 @@ GET  /healthz                  → 200 "ok"
 
 ## Criterios de aceptación
 
-- [ ] Un uso de 85% no genera alerta; uno de 85.1% sí.
-- [ ] Una fuente con potencia 0 se descarta sin romper el proceso.
-- [ ] El porcentaje mostrado es entero y coherente con el consumo real.
-- [ ] Procesar el mismo `eventId` dos veces deja una sola fila.
-- [ ] `GET /alerts?userId=` filtra por usuario y ordena por fecha descendente.
-- [ ] `PATCH /alerts/{id}/read` es idempotente y devuelve la alerta actualizada.
-- [ ] Un ID inexistente devuelve 404 con `ProblemDetails`.
-- [ ] La cobertura del módulo es ≥ 60%.
+- [x] Un uso de 85% no genera alerta; uno de 85.1% sí.
+- [x] Una fuente con potencia 0 se descarta sin romper el proceso.
+- [x] El porcentaje mostrado es entero y coherente con el consumo real.
+- [x] Procesar el mismo `eventId` dos veces deja una sola fila.
+- [x] `GET /alerts?userId=` filtra por usuario y ordena por fecha descendente.
+- [x] `PATCH /alerts/{id}/read` es idempotente y devuelve la alerta actualizada.
+- [x] Un ID inexistente devuelve 404 con `ProblemDetails`.
+- [x] La cobertura del módulo es ≥ 60%.
