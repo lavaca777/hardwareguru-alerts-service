@@ -42,10 +42,10 @@ Kafka__GroupId=alerts-service
 
 ## Criterios de aceptación
 
-- [ ] Un evento de 85.1% crea una alerta; uno de 85.0% no.
-- [ ] Un evento repetido no crea una segunda alerta.
-- [ ] Un evento inválido no tumba el consumidor.
-- [ ] El offset se confirma solo después del procesamiento.
-- [ ] El consumidor se detiene limpiamente al apagar el host.
-- [ ] Los errores de persistencia no se ocultan.
-- [ ] La cobertura del módulo es ≥ 60%.
+- [x] Un evento de 85.1% crea una alerta; uno de 85.0% no.
+- [x] Un evento repetido no crea una segunda alerta.
+- [x] Un evento inválido no tumba el consumidor.
+- [x] El offset se confirma solo después del procesamiento.
+- [x] El consumidor se detiene limpiamente al apagar el host.
+- [x] Los errores de persistencia no se ocultan.
+- [x] La cobertura del módulo es ≥ 60%.

@@ -8,7 +8,7 @@
 | .NET SDK | 8 | Compilación y ejecución |
 | ASP.NET Core | 8 | API REST y host único con el worker |
 | `BackgroundService` | .NET 8 | Consumidor Kafka en segundo plano |
-| `Confluent.Kafka` | versión a fijar | Cliente consumidor |
+| `Confluent.Kafka` | 2.16.0 | Cliente consumidor |
 | `System.Text.Json` | .NET 8 | Deserialización del evento |
 
 ## Persistencia
@@ -50,5 +50,7 @@ Base local: `hardwareguru_alerts` en el puerto **5436**. Se usa un puerto distin
 - `potenciaFuenteW <= 0` es un evento inválido para generar alertas.
 - El consumidor no hace commit del offset antes de persistir.
 - Kafka en modo KRaft; la creación automática de tópicos solo se permite en desarrollo.
+- En Windows con Docker Desktop, el cliente local debe usar `127.0.0.1:9092` (no `localhost`), porque librdkafka puede resolver a IPv6 y quedarse esperando al coordinador.
+- El consumidor está deshabilitado por defecto (`Kafka__Enabled=false`) para que la API y los tests no dependan de un broker.
 - No se agregan librerías nuevas sin aprobación.
 - Docker y Testcontainers requieren Docker Desktop en la máquina de desarrollo.

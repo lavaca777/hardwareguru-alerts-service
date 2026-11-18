@@ -54,6 +54,7 @@ Microservicio interno que consume eventos de builds guardadas y genera alertas p
 - No cambies el contrato del evento ni los campos JSON de la API sin coordinar.
 - No uses `EnsureCreated` en producción; usa migraciones EF Core.
 - No hagas commit de offsets de Kafka antes de persistir la alerta.
+- El consumidor Kafka se activa con `Kafka__Enabled=true`; por defecto está apagado para no exigir un broker en tests o en la API sola.
 - No loguees cadenas de conexión, tokens ni datos personales.
 - No uses `DateTime.Now`; usa `DateTimeOffset.UtcNow` o el timestamp del evento.
 - No rompas la idempotencia ni la restricción única de `eventId`.
